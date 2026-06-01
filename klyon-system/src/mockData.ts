@@ -205,10 +205,10 @@ export const initialClients: Client[] = [
       { id: 's3', name: 'Desenvolvimento de Landing Page', price: 3000, date: '2026-05-20' }
     ],
     activityHistory: [
-      { id: 'p1', date: '2026-05-18', description: 'Assinatura do Contrato e Onboarding.', type: 'setup' },
-      { id: 'p2', date: '2026-05-20', description: 'Entrega da Landing Page de Captação B2B.', type: 'other' },
-      { id: 'p3', date: '2026-05-21', description: 'Subida da Campanha de Conversão no Meta Ads.', type: 'ads_launch' },
-      { id: 'p4', date: '2026-05-25', description: 'Reunião semanal de alinhamento e repasse de leads.', type: 'meeting' }
+      { id: 'p1', date: '2026-05-18', title: 'Onboarding', description: 'Assinatura do Contrato e Onboarding.', cost: 0, adSpend: 0, type: 'other' },
+      { id: 'p2', date: '2026-05-20', title: 'Landing Page', description: 'Entrega da Landing Page de Captação B2B.', cost: 0, adSpend: 0, type: 'other' },
+      { id: 'p3', date: '2026-05-21', title: 'Campanha', description: 'Subida da Campanha de Conversão no Meta Ads.', cost: 0, adSpend: 0, type: 'ads' },
+      { id: 'p4', date: '2026-05-25', title: 'Reunião', description: 'Reunião semanal de alinhamento e repasse de leads.', cost: 0, adSpend: 0, type: 'service' }
     ]
   },
   {
@@ -280,10 +280,10 @@ export const initialClients: Client[] = [
       { id: 's7', name: 'Setup Pixel e Catálogo', price: 3000, date: '2026-05-01' }
     ],
     activityHistory: [
-      { id: 'p8', date: '2026-05-01', description: 'Configuração avançada do Pixel e Catálogo.', type: 'setup' },
-      { id: 'p9', date: '2026-05-03', description: 'Campanhas de Catálogo Advantage+ ativadas.', type: 'ads_launch' },
-      { id: 'p10', date: '2026-05-15', description: 'Escala de orçamento nas campanhas campeãs.', type: 'optimization' },
-      { id: 'p11', date: '2026-05-20', description: 'Reunião mensal de apresentação de ROI.', type: 'meeting' }
+      { id: 'p8', date: '2026-05-01', title: 'Pixel', description: 'Configuração avançada do Pixel e Catálogo.', cost: 0, adSpend: 0, type: 'other' },
+      { id: 'p9', date: '2026-05-03', title: 'Campanha', description: 'Campanhas de Catálogo Advantage+ ativadas.', cost: 0, adSpend: 0, type: 'ads' },
+      { id: 'p10', date: '2026-05-15', title: 'Otimização', description: 'Escala de orçamento nas campanhas campeãs.', cost: 0, adSpend: 0, type: 'other' },
+      { id: 'p11', date: '2026-05-20', title: 'Reunião', description: 'Reunião mensal de apresentação de ROI.', cost: 0, adSpend: 0, type: 'service' }
     ]
   }
 ];

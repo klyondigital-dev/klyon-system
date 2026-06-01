@@ -230,7 +230,7 @@ export function Inbox() {
             Configurar Robô
           </button>
           <button 
-            onClick={fetchChats}
+            onClick={() => fetchChats()}
             className="flex items-center gap-2 px-4 py-2 bg-neon-indigo hover:bg-indigo-600 rounded-lg text-white font-medium transition-colors"
           >
             <RefreshCw size={18} className={loadingChats ? "animate-spin" : ""} />

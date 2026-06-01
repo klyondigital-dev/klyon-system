@@ -307,8 +307,11 @@ export const LeadsCRM: React.FC<LeadsCRMProps> = ({ leads, setLeads, clients, se
         {
           id: `p_${Date.now()}`,
           date: new Date().toISOString().split('T')[0],
+          title: 'Setup',
           description: 'Contrato cadastrado manualmente no sistema.',
-          type: 'setup'
+          cost: 0,
+          adSpend: 0,
+          type: 'other'
         }
       ]
     };
