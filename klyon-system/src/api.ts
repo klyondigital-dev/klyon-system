@@ -1,6 +1,6 @@
 import type { AutomationFlow, Lead, Client, Transaction, Campaign, WebhookLink } from './types';
 
-const API_URL = 'http://localhost:3000/api';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
 
 const fetchWithAuth = async (url: string, options: RequestInit = {}) => {
   const token = localStorage.getItem('klyon_token');
