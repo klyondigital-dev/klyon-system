@@ -1,0 +1,17 @@
+{
+  "name": "antigravity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd klyon-system && npm run dev\" \"cd klyon-api && npm run dev\"",
+    "install:all": "cd klyon-system && npm install && cd ../klyon-api && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

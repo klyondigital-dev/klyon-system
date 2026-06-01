@@ -1,0 +1,7 @@
+/.agents
+/SKILL
+/SKILL.md
+node_modules/
+.env
+dist/
+build/
