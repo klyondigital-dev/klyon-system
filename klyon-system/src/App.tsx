@@ -42,6 +42,7 @@ function App() {
   const [automations, setAutomations] = useState<AutomationFlow[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [appError, setAppError] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const showToast = (message: string, type: ToastType = 'info') => {
     setToast({ isVisible: true, message, type });
@@ -227,8 +228,6 @@ function App() {
       />
     );
   }
-
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // RENDERIZAÇÃO DO PORTAL DA AGÊNCIA (Full Access)
   return (
