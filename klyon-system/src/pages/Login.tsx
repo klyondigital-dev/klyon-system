@@ -16,9 +16,18 @@ export function Login({ onLogin }: LoginProps) {
     e.preventDefault();
     setIsLoading(true);
     setError(false);
-    
+    // MVP Bypass Temporário
+    if (username === 'admin' && password === 'admin123') {
+      setTimeout(() => {
+        localStorage.setItem('klyon_token', 'mvp_bypass_token');
+        onLogin(true);
+      }, 1000);
+      return;
+    }
+
     try {
-      const response = await fetch('http://localhost:3000/api/auth/login', {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+      const response = await fetch(`${apiUrl}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email: username, password })
