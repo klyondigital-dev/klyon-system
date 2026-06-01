@@ -1,0 +1,11 @@
+{
+  "buildCommand": "cd klyon-system && npm install && npm run build",
+  "outputDirectory": "klyon-system/dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
