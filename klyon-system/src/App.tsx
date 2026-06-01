@@ -81,9 +81,11 @@ function App() {
         setAutomations(apiAutomations);
       } catch (error: any) {
         console.warn('⚠️ Erro no fetchData:', error);
-        setAppError(error?.message || 'Erro desconhecido ao carregar dados da API.');
+        if (localStorage.getItem('klyon_token') !== 'mvp_bypass_token') {
+          setAppError(error?.message || 'Erro desconhecido ao carregar dados da API.');
+        }
         
-        // Em vez de deslogar imediatamente, vamos mostrar o erro
+        // Carrega dados simulados
         setClients(initialClients);
         setLeads(initialLeads);
         setTransactions(initialTransactions);
