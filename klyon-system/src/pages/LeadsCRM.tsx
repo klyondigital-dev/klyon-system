@@ -146,7 +146,7 @@ export const LeadsCRM: React.FC<LeadsCRMProps> = ({ leads, setLeads, clients, se
       adSpendBudget: 5000,
       status: 'active',
       contractStartDate: new Date().toISOString().split('T')[0],
-      procedureHistory: []
+      activityHistory: []
     };
 
     const newTrans: Transaction = {
@@ -303,7 +303,7 @@ export const LeadsCRM: React.FC<LeadsCRMProps> = ({ leads, setLeads, clients, se
       totalAdSpend: 0,
       totalAgencySpend: Number(newClientSetup),
       servicesContracted: [],
-      procedureHistory: [
+      activityHistory: [
         {
           id: `p_${Date.now()}`,
           date: new Date().toISOString().split('T')[0],

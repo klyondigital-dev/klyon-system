@@ -45,8 +45,7 @@ export const ClientPortal: React.FC<ClientPortalProps> = ({ currentUser, clients
       const d = new Date(today);
       d.setDate(d.getDate() - i);
       const dateStr = d.toISOString().split('T')[0];
-      
-      const leadsForDate = leads.filter(l => l.createdAt.startsWith(dateStr)).length;
+      const leadsForDate = leads.filter(l => l.date.startsWith(dateStr)).length;
       
       // Para simular o gasto diário de forma simples (dividindo o total pelo número de dias, ou usando os leads)
       // Como não temos a data do gasto no objeto de campaign de forma diária, vamos usar um mock proporcional aos leads para fins de visualização do cliente
@@ -324,7 +323,7 @@ export const ClientPortal: React.FC<ClientPortalProps> = ({ currentUser, clients
                   </thead>
                   <tbody className="text-sm divide-y divide-white/[0.02]">
                     {leads.length > 0 ? leads.map(lead => {
-                      const dateObj = new Date(lead.createdAt);
+                      const dateObj = new Date(lead.date);
                       const isRecent = (new Date().getTime() - dateObj.getTime()) < 48 * 60 * 60 * 1000;
                       
                       return (
