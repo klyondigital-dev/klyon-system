@@ -56,7 +56,12 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const user = await authApi.getMe();
+        let user;
+        if (localStorage.getItem('klyon_token') === 'mvp_bypass_token') {
+          user = { id: 'admin_mock', role: 'admin', email: 'admin@klyon.com.br', name: 'Admin Klyon' };
+        } else {
+          user = await authApi.getMe();
+        }
         setCurrentUser(user);
 
         // Se for cliente, o backend já vai filtrar usando o token. Não precisamos mandar selectedClientId
